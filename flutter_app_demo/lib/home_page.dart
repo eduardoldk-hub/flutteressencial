@@ -23,6 +23,7 @@ _body() {
 //    the hole white space on the screen
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         _button(),
         _button(),
