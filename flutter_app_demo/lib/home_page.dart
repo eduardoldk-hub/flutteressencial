@@ -22,6 +22,7 @@ _body() {
 //    In the child bellow i can set a SizedBox.expand ho aloud the image fill
 //    the hole white space on the screen
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         _button(),
         _button(),
