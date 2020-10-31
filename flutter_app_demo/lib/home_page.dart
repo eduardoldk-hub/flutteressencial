@@ -18,22 +18,28 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           _text(),
-          Container(
-            height: 300,
-            child: PageView(
-              children: <Widget>[
-                _img("assets/images/img1.jpg"),
-                _img("assets/images/img2.jpg"),
-                _img("assets/images/img3.jpg"),
-                _img("assets/images/img4.jpg"),
-                _img("assets/images/img5.jpg"),
-              ],
-            ),
-          ),
+          _pageView(),
           _buttons()
         ]
       ),
     );
+  }
+
+// ------------------------------------------ About the images carrocell--------
+  Container _pageView() {
+    return Container(
+          margin: EdgeInsets.all(20),
+          height: 300,
+          child: PageView(
+            children: <Widget>[
+              _img("assets/images/img1.jpg"),
+              _img("assets/images/img2.jpg"),
+              _img("assets/images/img3.jpg"),
+              _img("assets/images/img4.jpg"),
+              _img("assets/images/img5.jpg"),
+            ],
+          ),
+        );
   }
 
 // ------------------- About the Colunm from the body, related to buttons ------
@@ -43,7 +49,7 @@ class HomePage extends StatelessWidget {
             Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            _button("ListViewe"),
+            _button("ListView"),
             _button("Page 2"),
             _button("Page 3")
           ],
