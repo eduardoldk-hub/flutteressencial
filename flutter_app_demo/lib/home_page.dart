@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: _body(),
     );
   }
-
+// ------------------------------------------------------ About the body--------
   _body() {
     return Container(
       color: Colors.white,
@@ -18,45 +18,77 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           _text(),
-          _img(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              _button(),
-              _button(),
-              _button()
-            ],
-          )
+          Container(
+            height: 300,
+            child: PageView(
+              children: <Widget>[
+                _img("assets/images/img1.jpg"),
+                _img("assets/images/img2.jpg"),
+                _img("assets/images/img3.jpg"),
+                _img("assets/images/img4.jpg"),
+                _img("assets/images/img5.jpg"),
+              ],
+            ),
+          ),
+          _buttons()
         ]
       ),
     );
   }
 
-  _button() {
+// ------------------- About the Colunm from the body, related to buttons ------
+  _buttons() {
+    return Column(
+          children: <Widget>[
+            Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            _button("ListViewe"),
+            _button("Page 2"),
+            _button("Page 3")
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            _button("Snack"),
+            _button("Dialog"),
+            _button("Toast")
+          ],
+        )
+      ],
+    );
+  }
+
+// --------------------------------------------------- About the buttons -------
+  _button(String text) {
     return RaisedButton(
       color: Colors.blue,
       child: Text(
-        "OK",
+        text,
         style: TextStyle(
           color: Colors.white,
-          fontSize: 30,
+          fontSize: 20,
         ),
       ),
       onPressed: _onClickOk
     );
   }
 
+// ------------------------------------ About the Onclick on the buttons -------
   void _onClickOk() {
     print("Clicou no botão!");
   }
 
-  _img() {
+// --------------------------------------------------- About the imagens -------
+  _img(String img) {
     return Image.asset(
-      "assets/images/img1.jpg",
+      img,
       fit: BoxFit.cover,
     );
   }
 
+// ------------------------------------- About the text on the container -------
   _text() {
     return Text(
       "Hello World",
