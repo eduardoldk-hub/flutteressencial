@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
 // ------------------------------------------ About the images carrocell--------
   Container _pageView() {
     return Container(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top:20, right: 20),
           height: 300,
           child: PageView(
             children: <Widget>[
