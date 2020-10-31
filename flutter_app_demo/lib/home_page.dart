@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
 // Metodo responsavel pelo body ------------------------------------------------
 _body() {
   return Container(
+    height: double.infinity,
     color: Colors.green,
 //    In the child bellow i can set a SizedBox.expand ho aloud the image fill
 //    the hole white space on the screen
