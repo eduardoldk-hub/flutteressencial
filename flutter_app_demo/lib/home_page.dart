@@ -22,11 +22,11 @@ _body(context) {
   Size size = MediaQuery.of(context).size;
 
   return Container(
-    height: size.height,
+    width: size.width,
     color: Colors.green,
 //    In the child bellow i can set a SizedBox.expand ho aloud the image fill
 //    the hole white space on the screen
-    child: Row(
+    child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
