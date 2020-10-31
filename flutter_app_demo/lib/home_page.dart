@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           _text(),
           _img(),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetweengit ,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               _button(),
               _button(),
