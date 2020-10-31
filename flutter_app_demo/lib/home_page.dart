@@ -10,15 +10,19 @@ class HomePage extends StatelessWidget {
         title: Text("Hello Flutter"),
         centerTitle: true,
       ),
-      body: _body(),
+      body: _body(context),
     );
   }
 }
 
 // Metodo responsavel pelo body ------------------------------------------------
-_body() {
+_body(context) {
+
+
+  Size size = MediaQuery.of(context).size;
+
   return Container(
-    height: double.infinity,
+    height: size.height,
     color: Colors.green,
 //    In the child bellow i can set a SizedBox.expand ho aloud the image fill
 //    the hole white space on the screen
@@ -29,7 +33,7 @@ _body() {
         _button(),
         _button(),
         _button(),
-      ], 
+      ],
     ),
   );
 }
